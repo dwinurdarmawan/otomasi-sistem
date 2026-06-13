@@ -1204,6 +1204,11 @@ h1, h2, h3 {
     content: none;
   }
 
+  /* Remove film grain overlay */
+  body::before {
+    content: none;
+  }
+
   /* Remove the large global firefly field (page-body + footer) */
   .page-body::after,
   .footer::before {
@@ -1221,7 +1226,8 @@ h1, h2, h3 {
       radial-gradient(circle 26px at 82% 18%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
       radial-gradient(circle 32px at 30% 78%, rgba(216, 181, 109, 0.75) 0%, transparent 100%),
       radial-gradient(circle 24px at 85% 80%, rgba(255, 255, 255, 0.65) 0%, transparent 100%);
-    animation: fireflyGlow 5s ease-in-out infinite;
+      animation: none;
+      opacity: 0.4;
   }
 
   /* Disable card shimmer sweep and border glow pulse */
