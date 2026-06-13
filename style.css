@@ -285,14 +285,30 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
+  background-color: #0a0907;
+}
+
+/* Cinematic mp4 background */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+/* Soft gold glow layered above the video */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background-image:
     radial-gradient(ellipse at 75% 25%, rgba(216, 181, 109, 0.10) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 80%, rgba(216, 181, 109, 0.06) 0%, transparent 50%),
-    url("assets/hero-bg.webp");
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-color: #0a0907;
+    radial-gradient(ellipse at 20% 80%, rgba(216, 181, 109, 0.06) 0%, transparent 50%);
 }
 
 /* Dark cinematic overlay for text legibility */
@@ -768,8 +784,8 @@ h1, h2, h3 {
     padding-bottom: 48px;
   }
 
-  .hero-bg {
-    background-position: center top;
+  .hero-video {
+    object-position: center top;
   }
 
   .navbar {
