@@ -45,7 +45,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text-paragraph);
-  font-family: "Almarai", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -86,9 +86,9 @@ h1, h2, h3 {
 }
 
 .accent {
-  font-family: "Instrument Serif", serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--gold);
   letter-spacing: 0;
 }
@@ -116,18 +116,21 @@ h1, h2, h3 {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  filter: blur(8px);
+  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease), filter 0.85s var(--ease);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
   }
 }
@@ -150,7 +153,7 @@ h1, h2, h3 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "Almarai", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 15px 30px;
@@ -172,16 +175,23 @@ h1, h2, h3 {
   background: linear-gradient(135deg, var(--gold) 0%, var(--cream) 100%);
   color: #20180c;
   box-shadow: 0 8px 24px rgba(216, 181, 109, 0.18);
+  animation: ctaBreathe 3.6s ease-in-out infinite;
+}
+
+@keyframes ctaBreathe {
+  0%, 100% { box-shadow: 0 8px 24px rgba(216, 181, 109, 0.18); }
+  50% { box-shadow: 0 8px 30px rgba(216, 181, 109, 0.38); }
 }
 
 .btn-gold:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(216, 181, 109, 0.3);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(216, 181, 109, 0.42);
   gap: 14px;
+  animation-play-state: paused;
 }
 
 .btn-gold:hover svg {
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 /* =========================================================
@@ -207,9 +217,10 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: "Instrument Serif", serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.6rem;
   color: var(--cream);
 }
 
@@ -321,6 +332,28 @@ h1, h2, h3 {
     linear-gradient(to right, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.55) 38%, rgba(5, 5, 5, 0.15) 75%);
 }
 
+/* Slow-drifting particles for a cinematic atmosphere */
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(216, 181, 109, 0.55) 0, transparent 1.5px),
+    radial-gradient(circle at 68% 62%, rgba(216, 181, 109, 0.4) 0, transparent 1px),
+    radial-gradient(circle at 42% 82%, rgba(255, 255, 255, 0.3) 0, transparent 1px),
+    radial-gradient(circle at 85% 18%, rgba(216, 181, 109, 0.35) 0, transparent 1.5px),
+    radial-gradient(circle at 56% 46%, rgba(255, 255, 255, 0.25) 0, transparent 1px),
+    radial-gradient(circle at 12% 72%, rgba(216, 181, 109, 0.3) 0, transparent 1px);
+  animation: floatParticles 75s ease-in-out infinite alternate;
+}
+
+@keyframes floatParticles {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-2.5%, -3%); }
+}
+
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -343,9 +376,12 @@ h1, h2, h3 {
 }
 
 .hero-title {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
-  line-height: 1.08;
-  color: var(--text-primary);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(2.9rem, 6.8vw, 5.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
 }
 
 .hero-title .accent {
@@ -418,8 +454,11 @@ h1, h2, h3 {
 }
 
 .section-heading h2 {
-  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
-  line-height: 1.3;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  line-height: 1.25;
 }
 
 .section-heading p {
@@ -444,9 +483,11 @@ h1, h2, h3 {
 }
 
 .about-heading {
-  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
-  line-height: 1.45;
-  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .about-text {
@@ -496,14 +537,55 @@ h1, h2, h3 {
 }
 
 .service-card {
-  background: linear-gradient(165deg, var(--bg-card-alt) 0%, var(--bg-card) 70%);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(155deg, #1a1610 0%, #141414 55%, #101010 100%);
+  border: 1px solid rgba(216, 181, 109, 0.15);
   border-radius: var(--radius-md);
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 0 50px rgba(216, 181, 109, 0.03);
   transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.05) 50%, transparent 65%);
+  background-size: 200% 200%;
+  background-position: -40% -40%;
+  animation: shimmerSweep 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(216, 181, 109, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  animation: borderGlowPulse 7s ease-in-out infinite;
+}
+
+.service-card > * {
+  position: relative;
+}
+
+@keyframes shimmerSweep {
+  0%, 100% { background-position: -40% -40%; }
+  50% { background-position: 140% 140%; }
+}
+
+@keyframes borderGlowPulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .service-card:hover {
@@ -519,8 +601,9 @@ h1, h2, h3 {
 }
 
 .service-number {
-  font-family: "Instrument Serif", serif;
-  font-size: 1.1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
   color: var(--gold);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -536,6 +619,12 @@ h1, h2, h3 {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--gold);
+  animation: iconGlowPulse 5s ease-in-out infinite;
+}
+
+@keyframes iconGlowPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(216, 181, 109, 0); }
+  50% { box-shadow: 0 0 14px rgba(216, 181, 109, 0.35); }
 }
 
 .service-icon svg {
@@ -597,14 +686,45 @@ h1, h2, h3 {
 }
 
 .step-card {
-  background: var(--bg-card-soft);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(155deg, #1a1610 0%, #141414 55%, #101010 100%);
+  border: 1px solid rgba(216, 181, 109, 0.15);
   border-radius: var(--radius-md);
   padding: 30px 26px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 0 50px rgba(216, 181, 109, 0.03);
   transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.05) 50%, transparent 65%);
+  background-size: 200% 200%;
+  background-position: -40% -40%;
+  animation: shimmerSweep 11s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.step-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(216, 181, 109, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  animation: borderGlowPulse 8s ease-in-out infinite;
+}
+
+.step-card > * {
+  position: relative;
 }
 
 .step-card:hover {
@@ -613,9 +733,10 @@ h1, h2, h3 {
 }
 
 .step-number {
-  font-family: "Instrument Serif", serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 2.1rem;
   color: var(--gold);
   line-height: 1;
 }
@@ -682,7 +803,10 @@ h1, h2, h3 {
 }
 
 .cta-left h2 {
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   line-height: 1.3;
   margin-bottom: 14px;
 }
