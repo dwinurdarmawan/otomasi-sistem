@@ -65,28 +65,33 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Continuous cinematic aurora glow, spans the whole page */
+/* Daun kering kuning melayang di seluruh halaman (desktop) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 998;
   pointer-events: none;
-  mix-blend-mode: soft-light;
-  background-image:
-    radial-gradient(ellipse 70% 55% at 12% 15%, rgba(216, 181, 109, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 55% at 88% 30%, rgba(216, 181, 109, 0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 60% at 25% 85%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 60% at 80% 90%, rgba(216, 181, 109, 0.22) 0%, transparent 60%);
-  background-size: 160% 160%;
+  mix-blend-mode: screen;
   background-repeat: no-repeat;
-  animation: auroraDrift 80s ease-in-out infinite alternate;
-}
-
-@keyframes auroraDrift {
-  0%   { transform: translate(0%, 0%); }
-  50%  { transform: translate(-3%, 2.5%); }
-  100% { transform: translate(2.5%, -2%); }
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.75'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(35 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.7'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-22 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.72'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(55 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.68'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-45 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.73'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(18 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.76'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-60 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.7'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.74'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(42 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.71'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-28 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.77'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
+  background-position:
+    8% 8%,   25% 5%,  48% 10%, 72% 4%,  90% 9%,
+    15% 35%, 38% 30%, 60% 38%, 82% 32%, 95% 55%;
+  background-size:
+    18px 24px, 14px 18px, 20px 26px, 13px 17px, 16px 22px,
+    15px 20px, 19px 25px, 12px 16px, 17px 23px, 14px 18px;
+  animation: leafFieldDrift 60s ease-in-out infinite alternate, leafTwinkle 7s ease-in-out infinite;
 }
 
 img {
@@ -160,7 +165,8 @@ h1, h2, h3 {
 }
 
 /* =========================================================
-   FIREFLY FIELDS — Layanan, Tentang, Cara Kerja, Kontak
+   DAUN KERING KUNING — Layanan, Tentang, Cara Kerja, Kontak
+   z-index: 10 agar daun muncul di atas kotak-kotak card
    ========================================================= */
 #tentang::before,
 #layanan::before,
@@ -171,6 +177,7 @@ h1, h2, h3 {
   inset: 0;
   pointer-events: none;
   mix-blend-mode: screen;
+  z-index: 10;
   background-repeat: no-repeat;
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
@@ -308,7 +315,7 @@ h1, h2, h3 {
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* =========================================================
