@@ -168,6 +168,7 @@ h1, h2, h3 {
    DAUN KERING KUNING — Layanan, Tentang, Cara Kerja, Kontak
    z-index: 10 agar daun muncul di atas kotak-kotak card
    ========================================================= */
+#demo::before,
 #tentang::before,
 #layanan::before,
 #cara-kerja::before,
@@ -203,6 +204,7 @@ h1, h2, h3 {
 #tentang::before { animation-delay: -6s, -2.4s; }
 #cara-kerja::before { animation-delay: -12s, -0.6s; }
 #kontak::before { animation-delay: -18s, -3.6s; }
+#demo::before { animation-delay: -3s, -1.8s; }
 
 @keyframes leafDrift {
   0%   { transform: translate(0%, 0%); }
@@ -1022,6 +1024,104 @@ h1, h2, h3 {
 }
 
 /* =========================================================
+   DEMO SISTEM
+   ========================================================= */
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 60px;
+  align-items: center;
+}
+
+.demo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.demo-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+}
+
+.demo-desc {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.demo-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.demo-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.94rem;
+  color: var(--text-paragraph);
+}
+
+.demo-checklist li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D8B56D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.demo-phone-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-phone {
+  position: relative;
+  width: 240px;
+  background: #080706;
+  border-radius: 36px;
+  border: 2px solid rgba(216, 181, 109, 0.22);
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,0.04),
+    0 24px 64px rgba(0,0,0,0.65),
+    0 0 48px rgba(216, 181, 109, 0.07);
+  overflow: hidden;
+  padding-top: 18px;
+}
+
+.demo-phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 6px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.demo-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  object-fit: cover;
+  border-radius: 0 0 34px 34px;
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 .footer {
@@ -1037,6 +1137,19 @@ h1, h2, h3 {
    RESPONSIVE — TABLET
    ========================================================= */
 @media (max-width: 1024px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .demo-phone-wrap {
+    order: -1;
+  }
+
+  .demo-phone {
+    width: 220px;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -1179,6 +1292,10 @@ h1, h2, h3 {
     padding: 28px 20px;
   }
 
+  .demo-phone {
+    width: 200px;
+  }
+
   .cta-left h2 {
     font-size: 1.6rem;
   }
@@ -1221,7 +1338,8 @@ h1, h2, h3 {
   #tentang::before,
   #layanan::before,
   #cara-kerja::before,
-  #kontak::before {
+  #kontak::before,
+  #demo::before {
     background-image:
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(30 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
