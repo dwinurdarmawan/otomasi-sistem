@@ -65,35 +65,6 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Daun kering kuning melayang di seluruh halaman (desktop) */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 998;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background-repeat: no-repeat;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.75'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(35 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.7'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-22 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.72'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(55 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.68'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-45 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.73'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(18 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.76'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-60 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.7'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.74'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(42 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.71'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-28 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.77'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
-  background-position:
-    8% 8%,   25% 5%,  48% 10%, 72% 4%,  90% 9%,
-    15% 35%, 38% 30%, 60% 38%, 82% 32%, 95% 55%;
-  background-size:
-    18px 24px, 14px 18px, 20px 26px, 13px 17px, 16px 22px,
-    15px 20px, 19px 25px, 12px 16px, 17px 23px, 14px 18px;
-  animation: leafFieldDrift 60s ease-in-out infinite alternate, leafTwinkle 7s ease-in-out infinite;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -164,55 +135,13 @@ h1, h2, h3 {
   }
 }
 
-/* =========================================================
-   DAUN KERING KUNING — Layanan, Tentang, Cara Kerja, Kontak
-   z-index: 10 agar daun muncul di atas kotak-kotak card
-   ========================================================= */
-#demo::before,
-#tentang::before,
-#layanan::before,
-#cara-kerja::before,
-#kontak::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  z-index: 10;
-  background-repeat: no-repeat;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(28 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-22 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.9'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(50 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.8'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-45 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(15 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-60 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.78'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E");
-  background-position:
-    12% 22%, 82% 14%, 32% 72%, 68% 56%,
-    90% 82%, 50% 38%, 18% 92%, 76% 42%;
-  background-size:
-    18px 24px, 14px 18px, 20px 26px, 12px 16px,
-    16px 22px, 15px 20px, 19px 25px, 13px 17px;
-  animation:
-    leafDrift 24s ease-in-out infinite alternate,
-    leafSway 4.2s ease-in-out infinite;
-}
 
-#layanan::before { animation-delay: 0s, -1.2s; }
-#tentang::before { animation-delay: -6s, -2.4s; }
-#cara-kerja::before { animation-delay: -12s, -0.6s; }
-#kontak::before { animation-delay: -18s, -3.6s; }
-#demo::before { animation-delay: -3s, -1.8s; }
 
-@keyframes leafDrift {
-  0%   { transform: translate(0%, 0%); }
+
   100% { transform: translate(2%, -2.5%); }
 }
 
-@keyframes leafSway {
-  0%, 100% { opacity: 0.45; }
+
   50% { opacity: 0.9; }
 }
 
@@ -226,88 +155,21 @@ h1, h2, h3 {
   }
 }
 
-/* =========================================================
-   GLOBAL FIREFLY FIELD — Tentang → Footer
-   ========================================================= */
-.page-body::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background-repeat: no-repeat;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(35 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.8'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-20 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(55 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.78'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-45 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(15 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.86'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-60 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.83'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.8'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(40 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-30 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(65 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.79'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-10 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.87'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.84'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(50 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.81'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E");
-  background-position:
-    6% 4%,   22% 9%,  41% 3%,  63% 11%, 87% 6%,
-    8% 22%,  30% 27%, 52% 20%, 74% 25%, 92% 33%,
-    14% 40%, 36% 45%, 58% 41%, 80% 47%;
-  background-size:
-    16px 22px, 12px 16px, 18px 24px, 13px 17px, 20px 26px,
-    14px 18px, 17px 23px, 11px 15px, 19px 25px, 15px 20px,
-    16px 22px, 13px 17px, 18px 24px, 14px 18px;
-  animation:
-    leafFieldDrift 46s ease-in-out infinite alternate,
-    leafTwinkle 6.4s ease-in-out infinite;
-}
 
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background-repeat: no-repeat;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(20 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-35 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.8'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23DDB84A' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(50 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23E8C255' opacity='0.78'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(-15 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.85'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(40 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E");
-  background-position:
-    10% 30%, 28% 70%, 50% 20%, 70% 60%, 88% 35%, 95% 75%;
-  background-size:
-    16px 22px, 13px 17px, 18px 24px, 14px 18px, 17px 23px, 12px 16px;
-  animation:
-    leafFieldDrift 38s ease-in-out infinite alternate,
-    leafTwinkle 5.2s ease-in-out infinite;
-  animation-delay: -10s, -2.6s;
-}
 
-@keyframes leafFieldDrift {
-  0%   { transform: translate(0%, 0%); }
+
+
+
   100% { transform: translate(1.5%, -2%); }
 }
 
-@keyframes leafTwinkle {
-  0%, 100% { opacity: 0.45; }
+
   18%      { opacity: 0.85; }
   36%      { opacity: 0.55; }
   58%      { opacity: 0.9; }
   77%      { opacity: 0.5; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .page-body::after,
-  .footer::before {
-    animation: none;
-    opacity: 0.35;
-  }
-}
 
 /* =========================================================
    CARDS (shared)
@@ -349,11 +211,9 @@ h1, h2, h3 {
   background: linear-gradient(135deg, var(--gold) 0%, var(--cream) 100%);
   color: #20180c;
   box-shadow: 0 8px 24px rgba(216, 181, 109, 0.18);
-  animation: ctaBreathe 3.6s ease-in-out infinite;
 }
 
-@keyframes ctaBreathe {
-  0%, 100% { box-shadow: 0 8px 24px rgba(216, 181, 109, 0.18); }
+
   50% { box-shadow: 0 8px 30px rgba(216, 181, 109, 0.38); }
 }
 
@@ -506,25 +366,7 @@ h1, h2, h3 {
     linear-gradient(to right, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.55) 38%, rgba(5, 5, 5, 0.15) 75%);
 }
 
-/* Slow-drifting particles for a cinematic atmosphere */
-.hero-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.4;
-  background-image:
-    radial-gradient(circle at 18% 28%, rgba(216, 181, 109, 0.55) 0, transparent 1.5px),
-    radial-gradient(circle at 68% 62%, rgba(216, 181, 109, 0.4) 0, transparent 1px),
-    radial-gradient(circle at 42% 82%, rgba(255, 255, 255, 0.3) 0, transparent 1px),
-    radial-gradient(circle at 85% 18%, rgba(216, 181, 109, 0.35) 0, transparent 1.5px),
-    radial-gradient(circle at 56% 46%, rgba(255, 255, 255, 0.25) 0, transparent 1px),
-    radial-gradient(circle at 12% 72%, rgba(216, 181, 109, 0.3) 0, transparent 1px);
-  animation: floatParticles 75s ease-in-out infinite alternate;
-}
 
-@keyframes floatParticles {
-  0% { transform: translate(0, 0); }
   100% { transform: translate(-2.5%, -3%); }
 }
 
@@ -735,7 +577,6 @@ h1, h2, h3 {
   background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.05) 50%, transparent 65%);
   background-size: 200% 200%;
   background-position: -40% -40%;
-  animation: shimmerSweep 10s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -747,20 +588,17 @@ h1, h2, h3 {
   border: 1px solid rgba(216, 181, 109, 0.25);
   opacity: 0;
   pointer-events: none;
-  animation: borderGlowPulse 7s ease-in-out infinite;
 }
 
 .service-card > * {
   position: relative;
 }
 
-@keyframes shimmerSweep {
-  0%, 100% { background-position: -40% -40%; }
+
   50% { background-position: 140% 140%; }
 }
 
-@keyframes borderGlowPulse {
-  0%, 100% { opacity: 0; }
+
   50% { opacity: 1; }
 }
 
@@ -795,11 +633,9 @@ h1, h2, h3 {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--gold);
-  animation: iconGlowPulse 5s ease-in-out infinite;
 }
 
-@keyframes iconGlowPulse {
-  0%, 100% { box-shadow: 0 0 0 rgba(216, 181, 109, 0); }
+
   50% { box-shadow: 0 0 14px rgba(216, 181, 109, 0.35); }
 }
 
@@ -884,7 +720,6 @@ h1, h2, h3 {
   background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.05) 50%, transparent 65%);
   background-size: 200% 200%;
   background-position: -40% -40%;
-  animation: shimmerSweep 11s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -896,7 +731,6 @@ h1, h2, h3 {
   border: 1px solid rgba(216, 181, 109, 0.25);
   opacity: 0;
   pointer-events: none;
-  animation: borderGlowPulse 8s ease-in-out infinite;
 }
 
 .step-card > * {
@@ -1023,6 +857,7 @@ h1, h2, h3 {
   color: var(--gold);
 }
 
+
 /* =========================================================
    DEMO SISTEM
    ========================================================= */
@@ -1082,7 +917,6 @@ h1, h2, h3 {
   background-position: center;
 }
 
-/* Phone mockup */
 .demo-phone-wrap {
   display: flex;
   justify-content: center;
@@ -1141,6 +975,7 @@ h1, h2, h3 {
    RESPONSIVE — TABLET
    ========================================================= */
 @media (max-width: 1024px) {
+
   .demo-grid {
     grid-template-columns: 1fr;
     gap: 44px;
@@ -1296,9 +1131,10 @@ h1, h2, h3 {
     padding: 28px 20px;
   }
 
-  .demo-phone {
+.demo-phone {
     width: 210px;
   }
+
 
   .cta-left h2 {
     font-size: 1.6rem;
@@ -1322,28 +1158,11 @@ h1, h2, h3 {
     -webkit-backdrop-filter: none;
   }
 
-  /* Remove the full-page aurora blend layer */
-  body::after {
-    content: none;
-  }
-
-  /* Remove film grain overlay */
-  body::before {
-    content: none;
-  }
-
-  /* Remove the large global firefly field (page-body + footer) */
-  .page-body::after,
-  .footer::before {
-    content: none;
-  }
-
   /* Lighten per-section leaf fields: fewer leaves, no animation */
   #tentang::before,
   #layanan::before,
   #cara-kerja::before,
-  #kontak::before,
-  #demo::before {
+  #kontak::before {
     background-image:
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23D4A843' opacity='0.88'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/svg%3E"),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 28'%3E%3Cg transform='rotate(30 10 14)'%3E%3Cpath d='M10 2 Q17 8 16 17 Q13 23 10 26 Q7 23 4 17 Q3 8 10 2Z' fill='%23C89535' opacity='0.82'/%3E%3Cpath d='M10 25 Q10.5 14 10 3' stroke='%23956228' stroke-width='0.9' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E"),
