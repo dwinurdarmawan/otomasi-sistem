@@ -335,16 +335,9 @@ h1, h2, h3 {
   object-position: center right;
 }
 
-/* Soft gold glow layered above the video */
+/* Soft gold glow layered above the video — disabled */
 .hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background-image:
-    radial-gradient(ellipse at 75% 25%, rgba(216, 181, 109, 0.10) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 80%, rgba(216, 181, 109, 0.06) 0%, transparent 50%);
+  content: none;
 }
 
 /* Dark cinematic overlay for text legibility */
