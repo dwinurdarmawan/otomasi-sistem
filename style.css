@@ -766,6 +766,7 @@ h1, h2, h3 {
 .cta-card {
   padding: 56px;
   overflow: hidden;
+  position: relative;
 }
 
 .cta-visual {
