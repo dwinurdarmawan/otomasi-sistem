@@ -1,11 +1,11 @@
 // =========================================================
 // DWI NUR DARMAWAN — SISTEM DIGITAL UNTUK USAHA ANDA
-// Light JS: scroll reveal + mobile nav toggle
+// Optimized JS: Scroll Reveal + Production-Ready Mobile Nav
 // =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ---------- Scroll reveal (fade-up) ---------- */
+  /* ---------- Scroll reveal ---------- */
   const revealEls = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
@@ -17,30 +17,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: "0px 0px -40px 0px"
+      threshold: 0.10,
+      rootMargin: "0px 0px -20px 0px"
     });
 
-    revealEls.forEach((el) => observer.observe(el));
+    revealEls.forEach((el) => {
+      // Elemen di dalam .hero langsung tampil — tidak perlu tunggu observer
+      if (el.closest(".hero")) {
+        el.classList.add("is-visible");
+      } else {
+        observer.observe(el);
+      }
+    });
   } else {
-    // Fallback: show everything immediately
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ---------- Mobile navbar toggle ---------- */
   const navToggle = document.getElementById("navbar-toggle");
-  const navLinks = document.getElementById("navbar-links");
+  const navLinks  = document.getElementById("navbar-links");
+  const body      = document.body;
 
   if (navToggle && navLinks) {
+
+    const toggleMenu = (isOpen) => {
+      navLinks.classList.toggle("is-open", isOpen);
+      navToggle.classList.toggle("is-active", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen);   // aksesibilitas
+      body.style.overflow = isOpen ? "hidden" : "";      // cegah scroll bocor
+    };
+
     navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("is-open");
+      toggleMenu(!navLinks.classList.contains("is-open"));
     });
 
-    // Close menu after clicking a link (mobile)
     navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("is-open");
-      });
+      link.addEventListener("click", () => toggleMenu(false));
     });
   }
 
