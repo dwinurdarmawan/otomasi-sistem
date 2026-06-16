@@ -169,6 +169,27 @@ h1, h2, h3 {
   box-shadow: 0 8px 24px rgba(236, 192, 19, 0.25);
 }
 
+/* Floating WA button */
+.btn-floating-wa {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 0.88rem;
+  box-shadow:
+    0 8px 24px rgba(236, 192, 19, 0.30),
+    0 2px 8px rgba(0,0,0,0.40);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-floating-wa:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 32px rgba(236, 192, 19, 0.40),
+    0 4px 12px rgba(0,0,0,0.45);
+}
+
 .btn-gold:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 14px 36px rgba(216, 181, 109, 0.42);
