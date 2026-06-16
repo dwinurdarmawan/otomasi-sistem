@@ -531,6 +531,12 @@ h1, h2, h3 {
   gap: 24px;
 }
 
+.services-grid .service-card:last-child:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+  max-width: calc(33.333% - 16px);
+  margin: 0 auto;
+}
+
 .service-card {
   background: linear-gradient(155deg, #1a1610 0%, #141414 55%, #101010 100%);
   border: 1px solid rgba(216, 181, 109, 0.15);
