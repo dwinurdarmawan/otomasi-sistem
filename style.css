@@ -983,6 +983,12 @@ h1, h2, h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .services-grid .service-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1110,6 +1116,12 @@ h1, h2, h3 {
   .services-grid,
   .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-grid .service-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
   }
 
   .cta-card {
