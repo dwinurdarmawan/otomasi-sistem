@@ -540,12 +540,15 @@ h1, h2, h3 {
 }
 
 /* Baris terakhir 2 card: center keduanya */
-.services-grid .service-card:nth-last-child(2):nth-child(3n + 1),
-.services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
-  margin-left: auto;
-}
-.services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
-  margin-right: auto;
+@media (min-width: 769px) {
+  /* Baris terakhir 2 card: center keduanya di desktop */
+  .services-grid .service-card:nth-last-child(2):nth-child(3n + 1),
+  .services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
+    margin-left: auto;
+  }
+  .services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
+    margin-right: auto;
+  }
 }
 
 .service-card {
