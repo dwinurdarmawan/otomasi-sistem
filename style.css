@@ -539,10 +539,13 @@ h1, h2, h3 {
   gap: 24px;
 }
 
-.services-grid .service-card:last-child:nth-child(3n + 1) {
-  grid-column: 1 / -1;
-  max-width: calc(33.333% - 16px);
-  margin: 0 auto;
+/* Baris terakhir 2 card: center keduanya */
+.services-grid .service-card:nth-last-child(2):nth-child(3n + 1),
+.services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
+  margin-left: auto;
+}
+.services-grid .service-card:nth-last-child(1):nth-child(3n + 2) {
+  margin-right: auto;
 }
 
 .service-card {
@@ -616,10 +619,6 @@ h1, h2, h3 {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--gold);
-}
-
-
-  50% { box-shadow: 0 0 14px rgba(216, 181, 109, 0.35); }
 }
 
 .service-icon svg {
@@ -983,11 +982,7 @@ h1, h2, h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-grid .service-card:last-child:nth-child(3n + 1) {
-    grid-column: auto;
-    max-width: none;
-    margin: 0;
-  }
+
 
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1118,11 +1113,7 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 
-  .services-grid .service-card:last-child:nth-child(3n + 1) {
-    grid-column: auto;
-    max-width: none;
-    margin: 0;
-  }
+
 
   .cta-card {
     padding: 28px 20px;
